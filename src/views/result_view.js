@@ -9,7 +9,6 @@ const ResultView = function() {
 ResultView.prototype.bindEvents = function() {
   PubSub.subscribe('PrimeChecker:result-calculated', (event) => {
     const primeOutcome = event.detail;
-    console.log("anothersilly message");
     this.displayResult(primeOutcome);
   });
 };
